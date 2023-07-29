@@ -17,19 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/products',[ProductController::class, 'index']);
-/*Route::post ('/products', function(){
-    return Product::Create([
-        'name' => 'product one',
-        'slug' => 'product-one',
-        'description' => 'This is product one',
-        'price' => '99.99'
-
-
-
-    ]
-    );
-
-}); */
+Route::post ('/products', [ProductController::class, 'store']); 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
