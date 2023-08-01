@@ -17,6 +17,7 @@ use App\Http\Controllers\AuthController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+//
 //rotas publicas
 Route::resource('products',ProductController::class);
 Route::get('/products/search/{name}',[ProductController::class, 'search']);
